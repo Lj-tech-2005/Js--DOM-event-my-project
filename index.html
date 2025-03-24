@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Movies</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a style="cursor:pointer;" href="index.html">My Movies</a>
+
+            <div class="nav-right">
+                <form>
+                    <input type="text" placeholder="Search anything">
+                    <i class="fa-solid search-icon fa-magnifying-glass"></i>
+                </form>
+                <span>
+                    <i class="fa-solid fa-bell"></i>
+                </span>
+
+
+                <a class="login-user" href="login.html">
+                    <i class="fa-solid fa-circle-user "></i>
+                    <div>Login</div>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+
+        <section class="left-menu">
+
+            <div class="mybtn">
+                <div class="menu-item">
+                    <button> <a href="index.html">Home</a></button>
+                    <button><a href="colorpicker.html">colorpicker</a></button>
+
+                    <button><a href="addtudo.html">Add Tudo</a></button>
+                    <button>Settings</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="right-containor ">
+
+            <section class="image-gallery">
+                <div class="main-img ">
+                    <div class="image-box">
+                        <button class="btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="slide-box">
+                            <div class="images">
+                                <img onclick="swap(this)"
+                                    src="./images/126453-3840x2160-desktop-4k-game-of-thrones-wallpaper-image.jpg"
+                                    alt="">
+                            </div>
+                            <div class="images">
+                                <img onclick="swap(this)" src="./images/wp6527932-paatal-lok-wallpapers.jpg" alt="">
+                            </div>
+                            <div class="images">
+                                <img onclick="swap(this)" src="./images/wp9316176-the-family-man-2-wallpapers.jpg"
+                                    alt="">
+                            </div>
+                            <div class="images">
+                                <img onclick="swap(this)" src="images/wallpaperflare.com_wallpaper.jpg" alt="">
+                            </div>
+                            <div class="images">
+                                <img onclick="swap(this)" src="./images/wp12350404-panchayat-web-series-wallpapers.jpg"
+                                    alt="">
+                            </div>
+                            <div class="images">
+                                <img onclick="swap(this)"
+                                    src="./images/15132-2880x1800-desktop-hd-game-of-thrones-wallpaper-image.jpg"
+                                    alt="">
+                            </div>
+                            <div class="images">
+                                <img onclick="swap(this)"
+                                    src="./images/14755-2560x1440-desktop-hd-stranger-things-background.jpg" alt="">
+                            </div>
+
+                        </div>
+
+
+                        <button class="btn"><i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </section>
+
+    </main>
+    <section>
+
+        <div class="second-sec ">
+            <div class="overlay"> </div>
+            <div class="trending-box "> Trending Now</div>
+            <div class="middle-img-slider-containor">
+                <div><button><i class="fa-solid fa-chevron-right"></i></button></div>
+                <div class="img-slider-containor"></div>
+                <div><button><i class="fa-solid fa-chevron-left"></i></button></div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class="">
+            <header class="api-header">
+                <h1> Search any <span style="color: red;">Movies</span></h1>
+            </header>
+
+            <div class="inp mt-5">
+                <input type="text" id="myinput" placeholder="Search Movies">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class=" movies-container">
+                <div id="movies_Container">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="margin-top:100px; margin-bottom: 100px;">
+
+        <h2 class="faq-heading pt-5">Frequently Asked Questions</h2>
+        <div class="faq-containor">
+            <div class="faqbox">
+
+                <p class="click-heading">What is My Movies? <span class="cross"><i class="fa-solid fa-xmark"></i><i
+                            class="fa-solid fa-plus"></i></span>
+                </p>
+
+                <div class="content">
+
+                    <p>My Movies is a streaming service that offers a wide variety of award-winning TV shows, movies,
+                        anime,
+                        documentaries and more – on thousands of internet-connected devices.
+                    </p>
+                    <p>
+
+                        You can watch as much as you want, whenever you want, without a single ad – all for one low
+                        monthly
+                        price. There's always something new to discover, and new TV shows and movies are added every
+                        week!
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="faqbox">
+
+                <p class="click-heading">How much does My Movies cost?<span class="cross"><i
+                            class="fa-solid fa-xmark"></i><i class="fa-solid fa-plus"></i></span>
+                </p>
+
+                <div class="content">
+
+                    <p>
+                        Watch My Movies on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one
+                        fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <div class="faqbox">
+
+                <p class="click-heading">Where can I watch?<span class="cross"><i class="fa-solid fa-xmark"></i><i
+                            class="fa-solid fa-plus"></i></span>
+                </p>
+
+                <div class="content">
+
+                    <p>
+                        Watch anywhere, anytime. Sign in with your My Movies account to watch instantly on the web at
+                        My Movies.com from your personal computer or on any internet-connected device that offers the
+                        My Movies app, including smart TVs, smartphones, tablets, streaming media players and game
+                        consoles.
+                    </p>
+                    <p>
+                        You can also download your favourite shows with the iOS or Android app. Use downloads to watch
+                        while you're on the go and without an internet connection. Take My Movies with you anywhere.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="faqbox">
+
+                <p class="click-heading">How do I cancel?<span class="cross"><i class="fa-solid fa-xmark"></i><i
+                            class="fa-solid fa-plus"></i></span>
+                </p>
+
+                <div class="content">
+
+                    <p>My Movies is flexible. There are no annoying contracts and no commitments. You can easily cancel
+                        your account online in two clicks. There are no cancellation fees – start or stop your account
+                        anytime.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <div class="faqbox">
+
+                <p class="click-heading">What can I watch on My Movies? <span class="cross"><i
+                            class="fa-solid fa-xmark"></i><i class="fa-solid fa-plus"></i></span>
+                </p>
+
+                <div class="content">
+
+                    <p>
+                        My Movies has an extensive library of feature films, documentaries, TV shows, anime,
+                        award-winning
+                        My Movies originals, and more. Watch as much as you want, anytime you want.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <div class="faqbox">
+
+                <p class="click-heading">Is My Movies good for kids? <span class="cross"><i
+                            class="fa-solid fa-xmark"></i><i class="fa-solid fa-plus"></i></span>
+                </p>
+
+                <div class="content">
+
+                    <p>
+                        The NMy Movies Kids experience is included in your membership to give parents control while kids
+                        enjoy family-friendly TV shows and films in their own space.
+                    </p>
+                    <p>
+                        Kids profiles come with PIN-protected parental controls that let you restrict the maturity
+                        rating of content kids can watch and block specific titles you don’t want kids to see.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="Questions-heading">Questions? Call<a
+                style="text-decoration: underline; cursor: pointer;">000-800-919-1694</a></div>
+
+        <div class="footer-options-containor">
+            <div class="footer-col">
+                <a>FAQ</a>
+
+                <a>Investor Relations</a>
+
+                <a>Privacy</a>
+
+                <a>Speed Test</a>
+
+            </div>
+            <div class="footer-col">
+
+                <a>Help Centre</a>
+
+                <a>Jobs</a>
+
+                <a>Cookie Preferences</a>
+
+                <a>Legal Notices</a>
+            </div>
+            <div class="footer-col">
+
+                <a>Account</a>
+
+                <a>Ways to Watch</a>
+
+                <a>Corporate Information</a>
+
+                <a>Only on Netflix</a>
+            </div>
+            <div class="footer-col">
+                <a>Media Centre</a>
+                <a>Terms of Use</a>
+                <a>Contact Us</a>
+            </div>
+
+        </div>
+
+        <select style="cursor: pointer; padding:6px;" class="btn last-btn" name="" id="">
+            <option value="English">English</option>
+            <option value="हिन्दी">हिन्दी</option>
+        </select>
+        <div class="ind">MYmovies India</div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Login-my-movies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+    <main class="login-main">
+        <div class="login_page_main">
+            <a style="font-size:40px; cursor: pointer;" href="index.html"><i class="fa-solid fa-house"></i></a>
+
+            <h1>Log in to MY Movies</h1>
+
+            <div class="sign_up_options" style="width:470px;height:270px; align-items: center;padding-bottom:40px;  margin-top:30px;">
+
+                <div class="option1">
+
+                    <img width="30px" height="30px" src="images/google.png" alt="">
+                    <p>Sign up with Google</p>
+                </div>
+
+                <div class="option1">
+
+                    <img width="25px" height="25px" src="images/facebook.png" alt="">
+                    <p>Sign up with Facebook</p>
+                </div>
+                <div class="option1">
+
+                    <img width="35px" height="35px" src="images/appstore.png" alt="">
+                    <p>Sign up with Apple</p>
+                </div>
+
+                <div class="option1" style="padding-left:50px;">
+
+                    <p>Continue with phone number</p>
+                </div>
+
+            </div>
+
+            <form id="userform">
+                <div class="group">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Enter your name">
+                    <span id="nameError"></span>
+                </div>
+                <div class="group">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="Enter your email">
+                    <span id="emailError"></span>
+                </div>
+                <div class="group">
+                    <label for="Contact">Contact</label>
+                    <input id="Contact" type="text" placeholder="Enter your contact">
+                    <span id="contactError"></span>
+                </div>
+
+                <div class="group">
+                    <label for="city">City</label>
+                    <select name="" id="select">
+                        <option value="">Select city</option>
+                        <option value="jaipur">Jaipur</option>
+                        <option value="jhunjhunu">Jhunjhunu</option>
+                        <option value="jodhpur">Jodhpur</option>
+                    </select>
+                    <span id="cityError"></span>
+                </div>
+                <button type="submit">Submit</button>
+               
+            </form>
+
+
+            <a style="margin-top:40px;" href="">Forgot your password?</a>
+
+            <p>Don't have an account?<a href="">Sign up for my movies</a></p>
+        </div>
+
+
+        <div style="color: white; margin-top:90px; text-align: center;">
+
+
+            <p>This site is protected by reCAPTCHA and the Google<a href="">Privacy Policy</a>and <a href=""> Terms of
+                    Service </a> apply.
+            </p>
+        </div>
+
+
+
+    </main>
+
+    <script>
+
+        var userform = document.querySelector("#userform");
+        var nameError = document.querySelector("#nameError");
+        var emailError = document.querySelector("#emailError");
+        var contactError = document.querySelector("#contactError");
+        var cityError = document.querySelector("#cityError");
+
+        userform.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var name = document.querySelector("#name").value.trim();
+            var email = document.querySelector("#email").value.trim();
+            var contact = document.querySelector("#Contact").value.trim();
+            var city = document.querySelector("#select").value.trim();
+
+            var emailreg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            var contactreg = /^[6-9]\d{9}$/;
+            var namereg = /^[A-Za-z\s]+$/;
+
+            var objerror = {};
+
+            if (name == "") {
+                objerror.name = "Name is required";
+            } else if (!namereg.test(name)) {
+                objerror.name = "Name must contain only alphabets and spaces";
+            }
+
+            if (email == "") {
+                objerror.email = "Email is required";
+            } else if (!emailreg.test(email)) {
+                objerror.email = "Email is invalid";
+            }
+
+            if (contact == "") {
+                objerror.contact = "Contact is required";
+            } else if (!contactreg.test(contact)) {
+                objerror.contact = "Contact is invalid";
+            }
+
+            if (city == "") {
+                objerror.city = "City is required";
+            }
+
+            nameError.innerText = objerror.name || "";
+            emailError.innerText = objerror.email || "";
+            contactError.innerText = objerror.contact || "";
+            cityError.innerText = objerror.city || "";
+
+            if (Object.keys(objerror).length === 0) {
+                alert("Form submitted successfully!");
+
+                document.querySelector("#name").value = "";
+                document.querySelector("#email").value = "";
+                document.querySelector("#Contact").value = "";
+                document.querySelector("#select").value = "";
+            }
+        });
+
+
+
+         </script>
+  
+</body>
+
+</html>

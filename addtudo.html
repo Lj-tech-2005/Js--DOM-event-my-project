@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>add-tudo-mymovires</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="color-picker-home">
+        <h1><a href="index.html">Home <i class="fa-solid fa-arrow-right"></i></a></h1>
+    </header>
+
+    <section class="addtudo-sec">
+        <div class=".main-addtodo">
+            <div class="listbar">
+                <input type="text" placeholder="Type something here" id="inp">
+                <button id="btn">ADD</button>
+            </div>
+
+            <div class="list-box">
+                <ol id="mylist">
+
+
+
+                </ol>
+            </div>
+           
+
+        </div>
+
+    </section>
+
+    <script>
+
+
+
+
+var input = document.querySelector("#inp")
+var mylist = document.querySelector("#mylist")
+var btn = document.querySelector("#btn")
+
+
+btn.addEventListener(
+
+    "click",
+
+    function (e) {
+
+        if (input.value != "") {
+
+            addtudo()
+            input.value = ""
+
+        } else {
+
+            alert("type something")
+        }
+
+    }
+
+
+)
+
+
+input.addEventListener(
+
+    "keyup",
+    function (e) {
+
+        if (input.value != "") {
+
+            if (e.key === "Enter") {
+
+                addtudo(this.value)
+                this.value = ""
+
+            }
+
+        } else {
+
+            alert("type something")
+        }
+
+    }
+)
+
+
+function addtudo(value) {
+
+    var li = document.createElement("li")
+    li.innerHTML = `${input.value}<span><i class="fa-solid fa-trash"></i></span>`
+    mylist.appendChild(li)
+
+
+    li.addEventListener(
+
+        "click",
+        function () {
+
+            li.classList.toggle("demo")
+
+        }
+    )
+
+    li.querySelector("span").addEventListener(
+
+        "click",
+        function () {
+            li.remove()
+
+        }
+
+
+    )
+
+}
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1093 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+
+    background-color: #000;
+
+}
+
+
+main {
+
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+.left-menu {
+
+    background-color: #121212;
+    height: 85vh;
+    width: 18%;
+    border-radius: 10px;
+
+
+}
+
+.menu-item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    gap: 10px;
+}
+
+
+
+.menu-item>button {
+
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    width: 150px;
+    text-align: start;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left: 20px;
+
+}
+
+
+.menu-item>button:hover {
+
+    background-color: red;
+    cursor: pointer;
+}
+
+
+.right-containor {
+
+    height: 85vh;
+    width: 83%;
+    background-color: #121212;
+    border-radius: 10px;
+
+}
+
+.mybtn {
+    width: 100%;
+
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: #000 !important;
+    height: 90px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+
+.navbar>a {
+
+    font-size: 30px;
+
+}
+
+
+.nav-right {
+
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+
+.login-user {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.navbar form {
+
+    position: relative;
+    height: 45px;
+    width: 350px;
+    margin-right: 10px;
+
+}
+
+
+
+.search-icon {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    color: white;
+}
+
+.navbar input {
+
+    background-color: #121212;
+    color: white;
+    padding-left: 50px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.navbar input:focus {
+
+    color: white;
+    outline: none;
+
+}
+
+.navbar input::placeholder {
+    color: white;
+}
+
+
+.fa-bell,
+.fa-circle-user {
+
+    margin-right: 20px;
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+.main-img {
+    height: 540px;
+    background-image: url("../images/125795-1920x1080-desktop-full-hd-game-of-thrones-background-photo.jpg");
+    background-size: cover;
+    position: relative;
+    transition: 0.3s;
+    margin-left: 8px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+
+.image-box {
+
+    height: 140px;
+    position: absolute;
+    width: 100%;
+    bottom: 6px;
+    padding-left: 170px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+.images {
+
+    height: 100px;
+    width: 150px;
+    border-radius: 10px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.images img:hover {
+
+    transform: scale(1.1);
+}
+
+
+.image-box img {
+
+    height: 100px;
+    width: 150px;
+    border-radius: 10px;
+    transition: 0.6s;
+
+}
+
+.image-box .btn {
+
+    background-color: white;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+
+}
+
+.btn:focus {
+
+    background-color: pink;
+}
+
+.btn:hover {
+
+    background-color: pink;
+
+}
+
+
+
+.slide-box {
+
+    width: 500px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    padding-left: 600px;
+}
+
+
+
+.second-sec {
+
+    background-image: url(../images/background\ img.jpg);
+    height: 90vh;
+    margin-top: 10px;
+    position: relative;
+
+}
+
+
+.overlay {
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    top: 0;
+    z-index: 0;
+
+}
+
+
+
+.trending-box {
+
+    color: white;
+    height: 50px;
+    margin-top: 60px;
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 600;
+    position: absolute;
+    top: 0px;
+
+}
+
+
+.middle-img-slider-containor {
+
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 160px;
+
+}
+
+.img-slider-containor {
+
+    height: 100%;
+    width: 965px;
+    display: flex;
+    overflow: hidden;
+    gap: 55px;
+    align-items: center;
+    padding-left: 15px;
+
+
+}
+
+.middle-img-slider-containor button {
+
+
+    width: 20px;
+    height: 120px;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transform: translateX();
+
+
+}
+
+.item {
+
+    height: 252px;
+    width: 180px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: 0.3s linear;
+    cursor: pointer;
+
+}
+
+
+
+.Slideimg {
+
+    height: 100%;
+    width: 100%;
+    transition: 0.6s;
+    border-radius: 10px;
+
+}
+
+.Slideimg:hover {
+
+    transform: scale(1.1);
+
+
+}
+
+
+
+/* api work */
+
+
+
+.movies-container {
+
+    display: flex;
+    margin-top: 90px;
+
+}
+
+#movies_Container {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+
+
+.api-header {
+    color: white;
+    text-align: start;
+    margin-top: 36px;
+
+}
+
+.api-header h1 {
+
+    padding-left: 50px;
+    text-align: start;
+    font-size: 40px;
+}
+
+.inp {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgba(240, 240, 240, 0.2);
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 90px;
+
+}
+
+
+.inp input {
+
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    padding-left: 30px;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    color: white;
+
+}
+
+.inp input::placeholder{
+    color: white;
+}
+
+
+.inp i {
+
+    font-size: 18px;
+    color: white;
+
+}
+
+.col-3 {
+
+    cursor: pointer;
+    transition: 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    position: relative;
+
+
+}
+
+.col-3 img {
+
+    height: 330px;
+    box-shadow: gray 0px 3px 8px;
+    width: 250px;
+
+}
+
+
+.col-3:hover {
+
+    transform: scale(1.1);
+}
+
+
+
+.title {
+    font-size: 18px;
+    padding-left: 5px;
+    color: black;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.row {
+
+    justify-content: center;
+}
+
+
+.details {
+
+    background-color: white;
+    width: 250px;
+    height: 190px;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.col-3:hover .details {
+
+    visibility: visible;
+    opacity: 1;
+    bottom: 0%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+
+/* faq style */
+
+
+
+.faq-heading {
+    padding-left: 110px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-size: 500;
+    color: white;
+
+}
+
+
+
+.faq-containor {
+
+    width: 1000px;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.faqbox {
+
+    height: auto;
+    width: 100%;
+    color: white;
+    font-weight: 100;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    flex-direction: column;
+}
+
+.click-heading {
+
+    height: 59px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    outline: none;
+}
+
+
+
+
+.faqbox:hover {
+
+    background-color: rgb(53, 52, 52);
+
+
+
+}
+
+
+
+.content>p {
+
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0px 20px 0px 20px;
+    margin-top: 20px;
+
+
+}
+
+.content {
+
+    display: none;
+    padding-bottom: 15px;
+    border-top: black 2px solid;
+
+}
+
+
+.fa-plus {
+
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+.plusshow {
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.fa-xmark {
+
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-top: 9px;
+
+}
+
+
+.crossshow {
+
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+
+
+
+.show {
+
+    display: block;
+
+}
+
+
+
+
+
+/* 
+login page css */
+
+
+
+#userform {
+
+
+    min-height:500px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-top: 20px;
+
+}
+
+.group {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.group input {
+
+    padding:15px;
+    border: 1px solid #7c7c7c;
+    background-color: transparent;
+    border-radius:10px;
+    outline: none;
+    color: white;
+
+}
+
+.group input::placeholder {
+
+    color: white;
+
+}
+
+.group input:hover {
+
+    border: 1px solid #fff;
+}
+
+.group select {
+
+    padding: 15px;
+    background-color:#121212;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+
+#userform .group span {
+
+  color: red;
+
+}
+
+
+#userform button {
+
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+
+.login-main {
+    background: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgb(0, 0, 0) 100%);
+    min-height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.login_page_main {
+
+    width: 734px;
+    height: 990px;
+    background-color: #121212;
+    color: white;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.login_page_main a {
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 10px;
+
+}
+
+
+
+
+.login_page_main>p {
+
+    color: rgb(179, 179, 179);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.login-page-btn:hover {
+
+    transform: scale(1.04);
+    cursor: pointer;
+
+}
+
+
+
+
+.for_line {
+    width: 100%;
+    color: #646464;
+    border: none;
+    border-bottom: #646464 1px solid;
+    position: relative;
+    
+}
+
+
+
+.sign_up_options {
+
+    width: 100%;
+    height: 210px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border-bottom: 2px solid #292929;
+
+}
+
+.option1 {
+
+    width: 330px;
+    height: 50px;
+    border: 1px solid #7c7c7c;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    gap: 45px;
+    cursor: pointer;
+}
+
+
+.option1:hover {
+
+    border: 1px solid #fff;
+}
+
+
+
+
+/* color picker css */
+
+ .containor-color {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+
+}
+
+.color-box {
+
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.overlay-color {
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+
+.color-picker-home{
+
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.color-picker-home h1 a:hover{
+
+    color: red;
+   
+}
+
+
+
+/* add tudo list css */
+
+
+
+.addtudo-sec {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    background-color: rgb(45, 45, 45);
+
+
+}
+
+.main-addtodo{
+
+    width: 500px;
+    height: 510px;
+    
+
+
+}
+
+
+.list-box {
+
+    width:500px;
+    overflow:auto;
+    height:450px;
+    padding: 10px;
+    padding-top: 0px;
+    background-color: white;
+
+}
+
+
+#btn{
+
+    cursor: pointer;
+    padding: 5px;
+}
+
+.listbar {
+
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    background-color: #FFE6A9;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+#inp {
+
+    height: 100%;
+    width: 80%;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+::placeholder {
+
+    color: rgb(30, 28, 28);
+}
+
+
+
+#mylist {
+
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+#mylist li {
+
+    list-style: none;
+    height: 40px;
+    width: 100%;
+    background-color: lightcyan;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-radius: 3px;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.fa-trash {
+
+
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+}
+
+
+.demo {
+
+    text-decoration: line-through;
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
+/* footer  css start */
+
+
+
+
+footer {
+
+    background-color: black;
+    padding: 40px;
+    height: 80vh;
+
+
+}
+
+.Questions-heading {
+
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+.footer-col {
+
+    color: rgba(255, 255, 255, 0.7);
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-options-containor {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 150px;
+    padding-left: 100px;
+    margin-top: 30px;
+
+}
+
+
+.last-btn {
+
+    margin-top: 65px;
+    margin-left: 100px;
+
+}
+
+.last-btn:focus {
+
+    outline: 2px solid white;
+
+}
+
+
+.ind {
+    margin-top: 30px;
+    margin-left: 100px;
+    color: rgba(255, 255, 255, 0.7);
+    height: 20vh;
+    font-size: 14px;
+    font-weight: 400;
+
+}

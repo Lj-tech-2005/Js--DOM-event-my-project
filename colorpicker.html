@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color pickar my movies</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+
+    <header class="color-picker-home">
+        <h1><a href="index.html">Home <i class="fa-solid fa-arrow-right"></i></a></h1>
+    </header>
+
+
+    <div class="containor-color">
+
+    </div>
+    <div class="overlay-color"></div>
+    <audio id="sound" src="massage.mp3"></audio>
+
+
+
+    <script>
+
+
+        var containorcolor = document.querySelector(".containor-color")
+        var overlaycolor = document.querySelector(".overlay-color")
+        var sound = document.querySelector("#sound")
+
+
+
+        var messages = ["well done", "copy", "Great"];
+
+        for (var i = 1; i <= 30; i++) {
+            var box = document.createElement("div");
+            box.classList.add("color-box");
+            containorcolor.appendChild(box);
+
+            var r = parseInt(Math.random() * 256).toString(16).padStart(2, "0");
+            var g = parseInt(Math.random() * 256).toString(16).padStart(2, "0");
+            var b = parseInt(Math.random() * 256).toString(16).padStart(2, "0");
+            var code = "#" + r + g + b;
+            box.style.backgroundColor = code;
+            box.innerText = code;
+
+            box.addEventListener("click", function (e) {
+                navigator.clipboard.writeText(e.target.innerText);
+                overlaycolor.style.backgroundColor = e.target.innerText;
+                overlaycolor.style.transform = "scale(1)";
+                sound.play()
+                overlaycolor.innerText = messages[parseInt(Math.random() * messages.length)];
+                setTimeout(function () {
+                    overlaycolor.style.transform = "scale(0)";
+                }, 1000);
+            });
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
