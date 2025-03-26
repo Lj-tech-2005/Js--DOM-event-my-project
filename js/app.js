@@ -305,3 +305,18 @@ button.forEach(
 
 // add tudo js
 
+
+var containormovies = document.querySelector(".containor-top-movies ol")
+
+
+
+
+for (var i = 1; i <= 24; i++) {
+
+    var litag = document.createElement("li")
+    containormovies.appendChild(litag)
+    litag.classList.add("item")
+    litag.style.backgroundImage = `Url(images/top/${i}.jpg)`
+
+
+}
