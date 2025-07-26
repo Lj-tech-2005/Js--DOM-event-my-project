@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    <meta name="google-site-verification" content="dStbiuCmqG26z0WWoh6v5ZzrQ04X0-weK5G6yoQKo1w" />
     <title>add-tudo-mymovires</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="images/letter_M_red-512.webp" type="image/x-icon">
@@ -30,7 +30,7 @@
 
                 </ol>
             </div>
-           
+
 
         </div>
 
@@ -41,85 +41,85 @@
 
 
 
-var input = document.querySelector("#inp")
-var mylist = document.querySelector("#mylist")
-var btn = document.querySelector("#btn")
+        var input = document.querySelector("#inp")
+        var mylist = document.querySelector("#mylist")
+        var btn = document.querySelector("#btn")
 
 
-btn.addEventListener(
+        btn.addEventListener(
 
-    "click",
+            "click",
 
-    function (e) {
+            function (e) {
 
-        if (input.value != "") {
+                if (input.value != "") {
 
-            addtudo()
-            input.value = ""
+                    addtudo()
+                    input.value = ""
 
-        } else {
+                } else {
 
-            alert("type something")
-        }
-
-    }
-
-
-)
-
-
-input.addEventListener(
-
-    "keyup",
-    function (e) {
-
-        if (input.value != "") {
-
-            if (e.key === "Enter") {
-
-                addtudo(this.value)
-                this.value = ""
+                    alert("type something")
+                }
 
             }
 
-        } else {
 
-            alert("type something")
+        )
+
+
+        input.addEventListener(
+
+            "keyup",
+            function (e) {
+
+                if (input.value != "") {
+
+                    if (e.key === "Enter") {
+
+                        addtudo(this.value)
+                        this.value = ""
+
+                    }
+
+                } else {
+
+                    alert("type something")
+                }
+
+            }
+        )
+
+
+        function addtudo(value) {
+
+            var li = document.createElement("li")
+            li.innerHTML = `${input.value}<span><i class="fa-solid fa-trash"></i></span>`
+            mylist.appendChild(li)
+
+
+            li.addEventListener(
+
+                "click",
+                function () {
+
+                    li.classList.toggle("demo")
+
+                }
+            )
+
+            li.querySelector("span").addEventListener(
+
+                "click",
+                function () {
+                    li.remove()
+
+                }
+
+
+            )
+
         }
-
-    }
-)
-
-
-function addtudo(value) {
-
-    var li = document.createElement("li")
-    li.innerHTML = `${input.value}<span><i class="fa-solid fa-trash"></i></span>`
-    mylist.appendChild(li)
-
-
-    li.addEventListener(
-
-        "click",
-        function () {
-
-            li.classList.toggle("demo")
-
-        }
-    )
-
-    li.querySelector("span").addEventListener(
-
-        "click",
-        function () {
-            li.remove()
-
-        }
-
-
-    )
-
-}
 
 
 
